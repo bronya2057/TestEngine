@@ -1,1 +1,2 @@
-python build_engine.py -Release -x64
+python build_engine.py -config Release -platform x64
+pause

@@ -40,10 +40,12 @@ def configure_and_build():
     else:
         generator = "Unix Makefiles"
 
-    cmake_args =["cmake" , "--build", ".", "--config", "Release"]
+    cmake_args =["cmake" , "--build", ".", "--config", args.config]
 
     subprocess.check_call(["cmake", "-G", generator, "../.."], cwd=buildDir)
     subprocess.check_call(cmake_args, cwd=buildDir)
 
+
+prepareCleanBuild()
 createBuildDirectory(buildDir)
 configure_and_build()
