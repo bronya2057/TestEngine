@@ -1,13 +1,24 @@
+#include <Engine.hpp>
+#include <CLogger.hpp>
 
 
-namespace Engine
+class Sandbox : public Engine::Application
 {
-   __declspec(dllimport) void printLib();
-}
+public:
+   Sandbox()
+   {
 
-int main()
+   }
+
+   ~Sandbox()
+   {
+
+   }
+};
+
+Engine::Application* Engine::createApplication()
 {
-   Engine::printLib();
-
-   return 0;
+   CLogger::connect();
+   CLogger::sendMessage("Hello how are you");
+   return new Sandbox();
 }

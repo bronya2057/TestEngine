@@ -6,6 +6,7 @@ import subprocess
 parser = argparse.ArgumentParser(description="arguments for engine build")
 parser.add_argument("-config", default='Debug', choices=['Release', 'Debug'])
 parser.add_argument("-platform", default='x64', choices=['Win32', 'x64'])
+parser.add_argument("-clean")
 
 args = parser.parse_args()
 
@@ -40,7 +41,8 @@ def configure_and_build():
     else:
         generator = "Unix Makefiles"
 
-    cmake_args =["cmake" , "--build", ".", "--config", args.config]
+    cmake_args =["cmake", "--build", ".",
+                 "--config", args.config]
 
     subprocess.check_call(["cmake", "-G", generator, "../.."], cwd=buildDir)
     subprocess.check_call(cmake_args, cwd=buildDir)

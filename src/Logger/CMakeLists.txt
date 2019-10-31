@@ -1,9 +1,8 @@
-set(TARGET_NAME Engine)
-
-
+set(TARGET_NAME Logger)
 
 add_library(${TARGET_NAME} 
             SHARED 
-            ${EngineDir}/Engine/Application.cpp)
+            client.cpp
+            CLogger.cpp)
 
 #add_library(sub::hello ALIAS hello_library)
