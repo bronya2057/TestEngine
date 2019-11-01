@@ -10,6 +10,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\CConsoleLogger.hpp" />
+    <ClInclude Include="inc\client.hpp" />
+    <ClInclude Include="inc\CLogger.hpp" />
+    <ClInclude Include="inc\LoggerAPI.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="private\CConsoleLogger.cpp" />
+    <ClCompile Include="private\client.cpp" />
+    <ClCompile Include="private\CLogger.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5A68359B-E087-4CFE-A4C6-331FB2BBC422}</ProjectGuid>
     <RootNamespace>Logger</RootNamespace>
@@ -50,6 +61,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ENGINE_WIN;ENGINE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -65,15 +78,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="client.cpp" />
-    <ClCompile Include="CLogger.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="client.hpp" />
-    <ClInclude Include="CLogger.hpp" />
-    <ClInclude Include="LoggerAPI.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

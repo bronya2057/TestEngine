@@ -11,8 +11,9 @@ target_link_libraries(${TARGET_NAME}
                       Logger)
 
 set(INCLUDE_DIRS 
-    ${EngineDir}
-    ${LoggerDir}
+    ${ENGINE_INC_DIR}
+    ${LOGGER_INC_DIR}
+    ${SPDLOG_DIR}
     )
-message(${INCLUDE_DIRS})
+
 target_include_directories(${TARGET_NAME} PRIVATE ${INCLUDE_DIRS})
