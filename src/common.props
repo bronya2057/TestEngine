@@ -4,11 +4,12 @@
   <PropertyGroup Label="UserMacros">
     <EngineInc>$(SolutionDir)Engine\inc</EngineInc>
     <LoggerInc>$(SolutionDir)Logger\inc</LoggerInc>
+    <EventsInc>$(SolutionDir)EventDispatcher\inc</EventsInc>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\build\$(Configuration)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\Logger\vendor\spdlog\include;$(LoggerInc)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\Logger\vendor\spdlog\include;$(LoggerInc);$(EventsInc)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
@@ -25,6 +26,9 @@
     </BuildMacro>
     <BuildMacro Include="LoggerInc">
       <Value>$(LoggerInc)</Value>
+    </BuildMacro>
+    <BuildMacro Include="EventsInc">
+      <Value>$(EventsInc)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

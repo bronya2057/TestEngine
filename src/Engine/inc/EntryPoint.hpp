@@ -13,9 +13,10 @@ int main(int argc, char** argv)
    Logger::CConsoleLogger::getClientLogger()->info("core warning");
 
    ENGINE_CORE_TRACE("Warn")
+   ENGINE_CORE_TRACE("Warn2")
 
-   CLogger::connect();
-   CLogger::sendMessage("Hello how are you");
+   //CLogger::connect(); Server logger
+   //CLogger::sendMessage("Hello how are you");
 
    app->run();
 

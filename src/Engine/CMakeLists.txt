@@ -17,10 +17,13 @@ add_library(${TARGET_NAME}
 set(INCLUDE_DIRS 
     ${LOGGER_INC_DIR}
     ${ENGINE_INC_DIR}
+    ${EVENTS_INC_DIR}
     ${SPDLOG_DIR}
     )
 
 target_include_directories(${TARGET_NAME} PRIVATE ${INCLUDE_DIRS})
+target_link_libraries(${TARGET_NAME} Logger)
+
 
 source_group(TREE ${ENGINE_DIR} FILES ${SOURCE_LIST})
 

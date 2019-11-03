@@ -17,14 +17,17 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
    target_compile_definitions(Sandbox PUBLIC "ENGINE_WIN")
    target_compile_definitions(Engine PUBLIC "ENGINE_WIN")
    target_compile_definitions(Logger PUBLIC "ENGINE_WIN")
+   target_compile_definitions(EventDispatcher PUBLIC "ENGINE_WIN")
 endif()
 
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
   target_compile_definitions(Engine PUBLIC "ENGINE_BUILD_DLL")
   target_compile_definitions(Logger PUBLIC "ENGINE_BUILD_DLL")
+  target_compile_definitions(EventDispatcher PUBLIC "ENGINE_BUILD_DLL")
 endif()
 
 
+message("SOURCES: ${SOURCES}")
 message("SOURCES: ${SOURCES}")
 message("PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
