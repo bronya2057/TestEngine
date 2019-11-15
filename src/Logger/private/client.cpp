@@ -5,7 +5,7 @@ namespace Logger
    SOCKET Connection;
 
    void sendMessage(const std::string& messageString) {
-      int messageStringSize = messageString.size();
+      int messageStringSize = static_cast<int>(messageString.size());
       send(Connection, (char*)&messageStringSize, sizeof(int), NULL);
       send(Connection, messageString.c_str() , messageStringSize, NULL);
       std::cout << messageString << std::endl;

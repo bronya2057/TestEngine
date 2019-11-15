@@ -8,7 +8,7 @@
 #define MESSAGE(str, ...) tfm::format(str, __VA_ARGS__);
 #define TM_PRINTF(f_, ...) printf((f_), ##__VA_ARGS__);
 
-const std::string getFileName(std::string fullPath);
+const LOGGER_API std::string getFileName(std::string fullPath);
 
 #define LOG(f_, ...) {char buffer[2048]; \
                       snprintf(buffer, sizeof(buffer), f_, ##__VA_ARGS__);\
@@ -23,8 +23,7 @@ const std::string getFileName(std::string fullPath);
                       str.append(buffer);\
                       str.append(" => ");\
                       str.append(TOSTRING(__LINE__));\
-                      CLogger::sendMessage(str);\
-                      std::cout<<buffer;}
+                      CLogger::sendMessage(str);}
 
 #define LOG_CALL() LOG("")
 

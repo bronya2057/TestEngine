@@ -15,7 +15,7 @@ int main(int argc, char** argv)
    ENGINE_CORE_TRACE("Warn")
    ENGINE_CORE_TRACE("Warn2")
 
-   //CLogger::connect(); Server logger
+   //CLogger::connect();
    //CLogger::sendMessage("Hello how are you");
 
    app->run();

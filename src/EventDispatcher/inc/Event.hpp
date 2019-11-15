@@ -24,9 +24,9 @@ namespace EventDispatcher {
       EventCategoryMouseButton = BIT(4)
    };
 
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\
-								virtual EventType GetEventType() const override { return GetStaticType(); }\
-								virtual const char* GetName() const override { return #type; }
+   #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\
+                                  virtual EventType GetEventType() const override { return GetStaticType(); }\
+                                  virtual const char* GetName() const override { return #type; }
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
@@ -46,6 +46,7 @@ namespace EventDispatcher {
       }
    };
 
+   //create instance of event dispatcher with some kind of event
    class EventDispatcher
    {
    public:
@@ -55,6 +56,7 @@ namespace EventDispatcher {
       }
 
       // F will be deduced by the compiler
+      //dispatch multiple times with func that takes the EventType and returns bool
       template<typename T, typename F>
       bool Dispatch(const F& func)
       {
