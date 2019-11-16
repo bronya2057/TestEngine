@@ -6,27 +6,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine\Application.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="private\Application.cpp" />
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Application.hpp">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Core.hpp">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\EntryPoint.hpp">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="inc\Application.hpp" />
     <ClInclude Include="inc\Core.hpp" />
     <ClInclude Include="inc\Engine.hpp" />
     <ClInclude Include="inc\EntryPoint.hpp" />
+    <ClInclude Include="inc\Events\ApplicationEvent.hpp" />
+    <ClInclude Include="inc\Events\Event.hpp" />
+    <ClInclude Include="inc\Events\EventDispatcherAPI.hpp" />
+    <ClInclude Include="inc\Events\KeyEvent.hpp" />
+    <ClInclude Include="inc\Events\MouseEvent.hpp" />
+    <ClInclude Include="inc\Logger\CConsoleLogger.hpp" />
+    <ClInclude Include="inc\Logger\client.hpp" />
+    <ClInclude Include="inc\Logger\CLogger.hpp" />
+    <ClInclude Include="inc\Logger\LoggerAPI.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="CMakeLists.txt" />
+    <ClCompile Include="private\Application.cpp" />
+    <ClCompile Include="private\Logger\CConsoleLogger.cpp" />
+    <ClCompile Include="private\Logger\client.cpp" />
+    <ClCompile Include="private\Logger\CLogger.cpp" />
   </ItemGroup>
 </Project>

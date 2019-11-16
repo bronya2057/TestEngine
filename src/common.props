@@ -3,13 +3,14 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <EngineInc>$(SolutionDir)Engine\inc</EngineInc>
-    <LoggerInc>$(SolutionDir)Logger\inc</LoggerInc>
-    <EventsInc>$(SolutionDir)EventDispatcher\inc</EventsInc>
+    <LoggerInc>$(EngineInc)Logger</LoggerInc>
+    <EventsInc>$(EngineInc)Events</EventsInc>
+    <VendorDir>$(SolutionDir)Engine\vendor</VendorDir>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\build\$(Configuration)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\Logger\vendor\spdlog\include;$(LoggerInc);$(EventsInc)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(VendorDir)\spdlog\include;$(LoggerInc);$(EventsInc)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
@@ -29,6 +30,9 @@
     </BuildMacro>
     <BuildMacro Include="EventsInc">
       <Value>$(EventsInc)</Value>
+    </BuildMacro>
+    <BuildMacro Include="VendorDir">
+      <Value>$(VendorDir)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
-#include "client.hpp"
-#include "CLogger.hpp"
+#include "Logger/client.hpp"
+#include "Logger/CLogger.hpp"
 
 #include <regex>
 

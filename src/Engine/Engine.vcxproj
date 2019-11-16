@@ -67,21 +67,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="inc\Application.hpp" />
     <ClInclude Include="inc\Core.hpp" />
     <ClInclude Include="inc\Engine.hpp" />
     <ClInclude Include="inc\EntryPoint.hpp" />
+    <ClInclude Include="inc\Events\ApplicationEvent.hpp" />
+    <ClInclude Include="inc\Events\Event.hpp" />
+    <ClInclude Include="inc\Events\EventDispatcherAPI.hpp" />
+    <ClInclude Include="inc\Events\KeyEvent.hpp" />
+    <ClInclude Include="inc\Events\MouseEvent.hpp" />
+    <ClInclude Include="inc\Logger\CConsoleLogger.hpp" />
+    <ClInclude Include="inc\Logger\client.hpp" />
+    <ClInclude Include="inc\Logger\CLogger.hpp" />
+    <ClInclude Include="inc\Logger\LoggerAPI.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\Application.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Logger\Logger.vcxproj">
-      <Project>{5a68359b-e087-4cfe-a4c6-331fb2bbc422}</Project>
-    </ProjectReference>
+    <ClCompile Include="private\Logger\CConsoleLogger.cpp" />
+    <ClCompile Include="private\Logger\client.cpp" />
+    <ClCompile Include="private\Logger\CLogger.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

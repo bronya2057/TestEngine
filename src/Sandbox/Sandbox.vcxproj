@@ -73,9 +73,6 @@
     <ProjectReference Include="..\Engine\Engine.vcxproj">
       <Project>{b5e2391f-0999-49a1-94a3-ede029b440a1}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Logger\Logger.vcxproj">
-      <Project>{5a68359b-e087-4cfe-a4c6-331fb2bbc422}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />

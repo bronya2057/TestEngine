@@ -1,14 +1,16 @@
 set(PROJECT_SOURCE_DIR   ${CMAKE_CURRENT_SOURCE_DIR})
 set(ENGINE_DIR           ${PROJECT_SOURCE_DIR}/Engine)
-set(LOGGER_DIR           ${PROJECT_SOURCE_DIR}/Logger)
-set(EVENTS_DIR           ${PROJECT_SOURCE_DIR}/EventDispatcher)
-set(SPDLOG_DIR           ${PROJECT_SOURCE_DIR}/Logger/vendor/spdlog/include)
+set(VENDOR_DIR           ${ENGINE_DIR}/vendor)
+set(SPDLOG_DIR           ${VENDOR_DIR}/spdlog/include)
 
-set(EVENTS_INC_DIR       ${EVENTS_DIR}/inc)
 set(ENGINE_INC_DIR       ${ENGINE_DIR}/inc)
-set(LOGGER_INC_DIR       ${LOGGER_DIR}/inc)
+set(ENGINE_PRIVATE_DIR   ${ENGINE_DIR}/private)
 
-add_subdirectory(EventDispatcher)
-add_subdirectory(Logger)
+set(EVENTS_INC_DIR ${ENGINE_INC_DIR}/Events)
+set(LOGGER_INC_DIR ${ENGINE_INC_DIR}/Logger)
+
+set(EVENTS_SRC_DIR ${ENGINE_PRIVATE_DIR}/Events)
+set(LOGGER_SRC_DIR ${ENGINE_PRIVATE_DIR}/Logger)
+
 add_subdirectory(Engine)
 add_subdirectory(Sandbox)

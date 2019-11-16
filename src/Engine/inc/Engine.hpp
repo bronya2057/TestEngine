@@ -4,8 +4,8 @@
 // FOR Use by Engine applications
 
 #include "Application.hpp"
-#include <CLogger.hpp>
-#include <CConsoleLogger.hpp>
+#include <Logger/CLogger.hpp>
+#include <Logger/CConsoleLogger.hpp>
 
 // ENTRY point
 #include "EntryPoint.hpp"

@@ -1,9 +1,9 @@
 #include "Application.hpp"
 
-#include "ApplicationEvent.hpp"
+#include "Events/ApplicationEvent.hpp"
 
-#include <CConsoleLogger.hpp>
-#include <CLogger.hpp>
+#include "Logger/CConsoleLogger.hpp"
+#include "Logger/CLogger.hpp"
 
 namespace Engine
 {

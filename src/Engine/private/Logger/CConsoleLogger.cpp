@@ -1,4 +1,4 @@
-#include "CConsoleLogger.hpp"
+#include "Logger/CConsoleLogger.hpp"
 
 #include "spdlog/sinks/stdout_color_sinks.h"
 
