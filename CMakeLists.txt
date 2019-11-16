@@ -1,7 +1,7 @@
 set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
-project (TestEngine LANGUAGES CXX)
+project (TestEngine LANGUAGES CXX C)
 
 if (UNITY_BUILD)
    include(cotire)
@@ -21,6 +21,8 @@ message(${libname})
    endif()
 
 endfunction()
+
+include( ${CMAKE_MODULE_PATH}/glwf.cmake)
 
 add_subdirectory(src)
 
