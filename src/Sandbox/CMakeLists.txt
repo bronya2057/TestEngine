@@ -16,4 +16,4 @@ set(INCLUDE_DIRS
 
 target_include_directories(${TARGET_NAME} PRIVATE ${INCLUDE_DIRS})
 
-cotire(${TARGET_NAME})
+add_cotire_lib(${TARGET_NAME})

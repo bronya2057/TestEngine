@@ -3,12 +3,24 @@ set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project (TestEngine LANGUAGES CXX)
 
-include(cotire)
+if (UNITY_BUILD)
+   include(cotire)
+endif()
+
 include(GNUInstallDirs)
 set(binFolder $<$<CONFIG:Debug>:cmakeDebug>$<$<CONFIG:Release>:cmakeRelease>)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${CMAKE_INSTALL_LIBDIR}/${binFolder})
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${CMAKE_INSTALL_LIBDIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${CMAKE_INSTALL_BINDIR}/${binFolder})
+
+function(add_cotire_lib libname)
+message(${libname})
+   if (UNITY_BUILD)
+   message("COTIRE${libname}")
+      cotire(${libname})
+   endif()
+
+endfunction()
 
 add_subdirectory(src)
 

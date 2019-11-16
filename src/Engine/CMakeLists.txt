@@ -47,5 +47,5 @@ set(INCLUDE_DIRS
 target_include_directories(${TARGET_NAME} PRIVATE ${INCLUDE_DIRS})
 
 source_group(TREE ${ENGINE_DIR} FILES ${SOURCE_LIST})
-cotire(${TARGET_NAME})
+add_cotire_lib(${TARGET_NAME})
 #add_library(sub::hello ALIAS hello_library)

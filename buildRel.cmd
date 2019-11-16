@@ -11,7 +11,7 @@ rem -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=s:/BIN
 rem -DWARN_AS_ERROR=false
 rem devenv TestEngine.sln /build "Release|x64"
 rem -DUSE_COTIRE=ON
-cmake --build . --config Release
+cmake --build . --config Release 
 
 
 pause

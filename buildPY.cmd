@@ -1,2 +1,2 @@
-python build_engine.py -config Release -platform x64
+python build_engine.py -config Release -platform x64 -unity false
 pause
