@@ -1,32 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Engine">
-      <UniqueIdentifier>{5fcf0828-a1d5-45ff-acec-e67f887fd995}</UniqueIdentifier>
+    <Filter Include="private">
+      <UniqueIdentifier>{f4380399-b5e3-4498-9cf1-da99b1f3bdab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="private\Logger">
+      <UniqueIdentifier>{3465b36f-c511-4393-957e-7a504d6f09a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{16ecc277-aec6-49b7-9c39-67080955e667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\Events">
+      <UniqueIdentifier>{8147612e-4c0e-4b9f-ba61-c4197e347350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\Logger">
+      <UniqueIdentifier>{b27d7b8e-9f28-4c7e-ac9a-eda97a0687d4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="CMakeLists.txt" />
+    <ClCompile Include="private\Application.cpp">
+      <Filter>private</Filter>
+    </ClCompile>
+    <ClCompile Include="private\Logger\CConsoleLogger.cpp">
+      <Filter>private\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="private\Logger\client.cpp">
+      <Filter>private\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="private\Logger\CLogger.cpp">
+      <Filter>private\Logger</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\Application.hpp" />
-    <ClInclude Include="inc\Core.hpp" />
-    <ClInclude Include="inc\Engine.hpp" />
-    <ClInclude Include="inc\EntryPoint.hpp" />
-    <ClInclude Include="inc\Events\ApplicationEvent.hpp" />
-    <ClInclude Include="inc\Events\Event.hpp" />
-    <ClInclude Include="inc\Events\EventDispatcherAPI.hpp" />
-    <ClInclude Include="inc\Events\KeyEvent.hpp" />
-    <ClInclude Include="inc\Events\MouseEvent.hpp" />
-    <ClInclude Include="inc\Logger\CConsoleLogger.hpp" />
-    <ClInclude Include="inc\Logger\client.hpp" />
-    <ClInclude Include="inc\Logger\CLogger.hpp" />
-    <ClInclude Include="inc\Logger\LoggerAPI.hpp" />
+    <ClInclude Include="inc\Application.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Core.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Engine.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\EntryPoint.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Events\ApplicationEvent.hpp">
+      <Filter>inc\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Events\Event.hpp">
+      <Filter>inc\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Events\EventDispatcherAPI.hpp">
+      <Filter>inc\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Events\KeyEvent.hpp">
+      <Filter>inc\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Events\MouseEvent.hpp">
+      <Filter>inc\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Logger\CConsoleLogger.hpp">
+      <Filter>inc\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Logger\client.hpp">
+      <Filter>inc\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Logger\CLogger.hpp">
+      <Filter>inc\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Logger\LoggerAPI.hpp">
+      <Filter>inc\Logger</Filter>
+    </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="private\Application.cpp" />
-    <ClCompile Include="private\Logger\CConsoleLogger.cpp" />
-    <ClCompile Include="private\Logger\client.cpp" />
-    <ClCompile Include="private\Logger\CLogger.cpp" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
