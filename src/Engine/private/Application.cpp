@@ -10,6 +10,7 @@ namespace Engine
 
 Application::Application()
 {
+   mWindow = std::unique_ptr<Window>(Window::Create());
 }
 
 Application::~Application()
@@ -23,7 +24,11 @@ void Application::run()
 
    CLogger::connect();
    LOG("%s", e.ToString().c_str());
-   
+   ENGINE_CORE_INFO("fweq");
+   while (mRunning)
+   {
+      mWindow->OnUpdate();
+   }
 }
 
 }//namespace Engine

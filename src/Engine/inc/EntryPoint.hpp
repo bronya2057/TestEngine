@@ -6,11 +6,11 @@ extern Engine::Application* Engine::createApplication();
 
 int main(int argc, char** argv)
 {
-   auto app = Engine::createApplication();
-
    Logger::CConsoleLogger::init();
    Logger::CConsoleLogger::getCoreLogger()->warn("core warning");
    Logger::CConsoleLogger::getClientLogger()->info("core warning");
+
+   auto app = Engine::createApplication();
 
    ENGINE_CORE_TRACE("Warn")
    ENGINE_CORE_TRACE("Warn2")

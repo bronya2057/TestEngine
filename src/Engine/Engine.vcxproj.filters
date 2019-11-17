@@ -2,24 +2,33 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="private">
-      <UniqueIdentifier>{f4380399-b5e3-4498-9cf1-da99b1f3bdab}</UniqueIdentifier>
+      <UniqueIdentifier>{957ebc3c-3a7e-4630-b88f-9e96da1b5ce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="private\Platform">
+      <UniqueIdentifier>{3b4e5f3d-594f-4f35-97f0-61f90721abf8}</UniqueIdentifier>
     </Filter>
     <Filter Include="private\Logger">
-      <UniqueIdentifier>{3465b36f-c511-4393-957e-7a504d6f09a2}</UniqueIdentifier>
+      <UniqueIdentifier>{5f668773-5caa-4936-80a9-3b8399790f5b}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc">
-      <UniqueIdentifier>{16ecc277-aec6-49b7-9c39-67080955e667}</UniqueIdentifier>
+      <UniqueIdentifier>{d5b32f3a-3ed5-44bc-8711-39c6c427e582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\Platform">
+      <UniqueIdentifier>{ed7de65a-f7ae-498a-8b84-ea24a12e567c}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\Events">
-      <UniqueIdentifier>{8147612e-4c0e-4b9f-ba61-c4197e347350}</UniqueIdentifier>
+      <UniqueIdentifier>{77e25d62-7f59-4045-a637-dad0d80b0b98}</UniqueIdentifier>
     </Filter>
     <Filter Include="inc\Logger">
-      <UniqueIdentifier>{b27d7b8e-9f28-4c7e-ac9a-eda97a0687d4}</UniqueIdentifier>
+      <UniqueIdentifier>{ff7a3552-c8ce-44a7-826c-31f3ca7bf3df}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\Application.cpp">
       <Filter>private</Filter>
+    </ClCompile>
+    <ClCompile Include="private\Platform\WindowsWindow.cpp">
+      <Filter>private\Platform</Filter>
     </ClCompile>
     <ClCompile Include="private\Logger\CConsoleLogger.cpp">
       <Filter>private\Logger</Filter>
@@ -71,6 +80,14 @@
     <ClInclude Include="inc\Logger\LoggerAPI.hpp">
       <Filter>inc\Logger</Filter>
     </ClInclude>
+    <ClInclude Include="inc\Window.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Platform\WindowsWindow.hpp">
+      <Filter>inc\Platform</Filter>
+    </ClInclude>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
 </Project>

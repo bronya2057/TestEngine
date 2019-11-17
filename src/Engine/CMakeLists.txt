@@ -8,6 +8,7 @@ set(
     ${ENGINE_DIR}/inc/Core.hpp
     ${ENGINE_DIR}/inc/EntryPoint.hpp
     ${ENGINE_SRC_DIR}/Application.cpp
+    ${ENGINE_SRC_DIR}/platform/WindowsWindow.cpp
 )
 
 set(
@@ -42,9 +43,15 @@ add_library(${TARGET_NAME}
 set(INCLUDE_DIRS 
     ${ENGINE_INC_DIR}
     ${SPDLOG_DIR}
+    ${GLFW_INC_DIR}
     )
 
+set(LIBRARIES
+    GLWF
+    opengl32.lib)
+
 target_include_directories(${TARGET_NAME} PRIVATE ${INCLUDE_DIRS})
+target_link_libraries(${TARGET_NAME} PRIVATE ${LIBRARIES})
 
 source_group(TREE ${ENGINE_DIR} FILES ${SOURCE_LIST})
 add_cotire_lib(${TARGET_NAME})

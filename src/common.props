@@ -6,6 +6,7 @@
     <LoggerInc>$(EngineInc)Logger</LoggerInc>
     <EventsInc>$(EngineInc)Events</EventsInc>
     <VendorDir>$(SolutionDir)Engine\vendor</VendorDir>
+    <GLFWInc>$(SolutionDir)Engine\vendor\glfw\include</GLFWInc>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
@@ -17,8 +18,7 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <ClCompile>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLFWInc)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -33,6 +33,9 @@
     </BuildMacro>
     <BuildMacro Include="VendorDir">
       <Value>$(VendorDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GLFWInc">
+      <Value>$(GLFWInc)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

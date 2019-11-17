@@ -1,6 +1,9 @@
 #pragma once
 
+#include <memory>
+
 #include "Core.hpp"
+#include "Window.hpp"
 
 namespace Engine
 {
@@ -13,7 +16,8 @@ public:
    void run();
 
 private:
-
+   std::unique_ptr<Window> mWindow;
+   bool mRunning = true;
 };
 
 //To be defined in client

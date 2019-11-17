@@ -11,6 +11,7 @@ set(LOGGER_INC_DIR ${ENGINE_INC_DIR}/Logger)
 
 set(EVENTS_SRC_DIR ${ENGINE_PRIVATE_DIR}/Events)
 set(LOGGER_SRC_DIR ${ENGINE_PRIVATE_DIR}/Logger)
+set(GLFW_INC_DIR   ${VENDOR_DIR}/glfw/include)
 
 add_subdirectory(Engine)
 add_subdirectory(Sandbox)

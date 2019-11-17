@@ -52,6 +52,10 @@
       <PreprocessorDefinitions>ENGINE_WIN;ENGINE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;GLWF.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\bin\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -83,12 +87,15 @@
     <ClInclude Include="inc\Logger\client.hpp" />
     <ClInclude Include="inc\Logger\CLogger.hpp" />
     <ClInclude Include="inc\Logger\LoggerAPI.hpp" />
+    <ClInclude Include="inc\Platform\WindowsWindow.hpp" />
+    <ClInclude Include="inc\Window.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\Application.cpp" />
     <ClCompile Include="private\Logger\CConsoleLogger.cpp" />
     <ClCompile Include="private\Logger\client.cpp" />
     <ClCompile Include="private\Logger\CLogger.cpp" />
+    <ClCompile Include="private\Platform\WindowsWindow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
